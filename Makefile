@@ -310,10 +310,7 @@ ifneq "$(NETCDF)" ""
 	LIBS += -L$(NETCDF)/lib
 	NCLIB = -lnetcdf
 	NCLIBF = -lnetcdff
-	ifneq ($(wildcard $(NETCDF)/lib/libnetcdff.*), ) # CHECK FOR NETCDF4
-		LIBS += $(NCLIBF)
-	endif # CHECK FOR NETCDF4
-	LIBS += $(NCLIB)
+	LIBS += $(NCLIBF) $(NCLIB)
 endif
 
 RM = rm -f
