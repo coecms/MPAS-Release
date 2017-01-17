@@ -19,3 +19,8 @@ module load netcdf-fortran/4.4.4
 module load pnetcdf/1.8.0
 
 module load pio/2.0.31-6ce7f36
+
+export PIO=$PIO_ROOT
+export GPTL=$PIO_ROOT
+export PNETCDF=$PNETCDF_ROOT
+export NETCDF=$NETCDF_FORTRAN_ROOT
