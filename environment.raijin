@@ -6,7 +6,7 @@ if [ $(bash -c 'module list --terse 2>&1' | wc -l) -gt 1 ]; then
     echo -e "\033[0;31mWARNING:\033[0m Modules appear to be loaded in your ~/.bashrc, ~/.bash_profile or ~/.profile files. These may create conflicts with the build environment"
 fi
 
-module use ~/scratch/testapps/modules
+module use ~access/modules
 
 # Compiler
 module load intel-fc/17.0.1.132
