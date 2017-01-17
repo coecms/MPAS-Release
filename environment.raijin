@@ -24,3 +24,5 @@ export PIO=$PIO_ROOT
 export GPTL=$PIO_ROOT
 export PNETCDF=$PNETCDF_ROOT
 export NETCDF=$NETCDF_FORTRAN_ROOT
+export USE_PIO2=true
+export TIMER_LIB=gptl

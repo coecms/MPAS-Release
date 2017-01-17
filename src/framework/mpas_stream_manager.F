@@ -2674,6 +2674,7 @@ module mpas_stream_manager
     !
     !-----------------------------------------------------------------------
     subroutine MPAS_stream_mgr_block_write(manager, writeBlock, streamID, timeLevel, mgLevel, forceWriteNow, writeTime, ierr) !{{{
+        use mpi, only: mpi_comm_self
 
         implicit none
 
