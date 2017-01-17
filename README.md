@@ -1,3 +1,27 @@
+NCI patches for MPAS
+====================
+
+This fork of MPAS is managed by the ARCCSS CMS team for use on the NCI HPC platforms
+
+## Building MPAS
+
+An environment file is provided to load the required modules. Use the `ifort`
+target to build the model
+
+    $ source environment.raijin
+    $ make CORE=atmosphere ifort
+
+See the model documentation for details of the cores.
+
+## Getting Help
+
+For model-specific help please contact the model developers, see
+http://mpas-dev.github.io/ for details
+
+For help building the model at NCI contact the ARCCSS CMS team at climate_help@nci.org.au
+
+**MPAS README follows**
+
 MPAS-v5.0
 ====
 
