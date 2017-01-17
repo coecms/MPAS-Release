@@ -3,6 +3,8 @@ NCI patches for MPAS
 
 This fork of MPAS is managed by the ARCCSS CMS team for use on the NCI HPC platforms
 
+http://climate-cms.unsw.wikispaces.net/mpas
+
 ## Building MPAS
 
 An environment file is provided to load the required modules. Use the `ifort`
@@ -13,6 +15,15 @@ target to build the model
 
 See the model documentation for details of the cores.
 
+## MPAS Module
+
+A pre-built version of MPAS is also available on Raijin
+
+    $ module use ~access/modules
+    $ module load mpas/5.0
+
+Once loaded, DBL and TBL files are available in the directory `$MPAS_DATA`
+
 ## Getting Help
 
 For model-specific help please contact the model developers, see
@@ -20,7 +31,29 @@ http://mpas-dev.github.io/ for details
 
 For help building the model at NCI contact the ARCCSS CMS team at climate_help@nci.org.au
 
-**MPAS README follows**
+## Maintenance
+
+The `master` branch is a copy of https://github.com/MPAS-Dev/MPAS-Release
+
+The default `nci` branch contains the latest version tested at NCI. Specific
+versions are available as branches named like `v5.0-nci`.
+
+To update the `nci` branch:
+
+    git checkout master
+    git remote add mpasdev https://github.com/MPAS-Dev/MPAS-Release
+    git pull mpasdev master
+    git push
+
+    git checkout nci
+    git merge master
+    # Test with the idealised cases
+    git push
+
+New tags released by the MPAS developers should have a `${tag}-nci` branch
+created and tested
+
+**MPAS README follows:**
 
 MPAS-v5.0
 ====
